@@ -1,0 +1,118 @@
+digraph classes {
+	"Lower Division Programming" [shape=box]
+	"COM SCI 31" [color=green,style=filled]
+
+	"Lower Division Programming" -> "COM SCI 31"
+	"Lower Division Programming" -> "COM SCI 32" -> "COM SCI 31"
+
+	LDEE [label="Lower Division Electrical Engineering",shape=box]
+	"EC ENGR 2" [color=blue,style=filled]
+	"EC ENGR 3" [color=blue,style=filled]
+	"EC ENGR 10" [color=green,style=filled]
+	"EC ENGR 10" -> "EC ENGR 11L" [color=red,label=corequisite]
+	"EC ENGR 11L" [color=green,style=filled]
+	"EC ENGR 11L" -> "EC ENGR 10" [color=red,label=corequisite]
+	LDEE -> "EC ENGR 2" -> "PHYSICS 1C"
+	LDEE -> "EC ENGR 3"
+	LDEE -> "EC ENGR 10"
+	LDEE -> "EC ENGR 11L"
+	LDEE -> "EC ENGR M16"
+
+	LDM [label="Lower Division Mathematics",shape=box,color=green,style=filled]
+	"MATH 31A" [color=green,style=filled]
+	"MATH 31B" [color=green,style=filled]
+	"MATH 32A" [color=green,style=filled]
+	"MATH 32B" [color=green,style=filled]
+	"MATH 33A" [color=green,style=filled]
+	"MATH 33B" [color=green,style=filled]
+	LDM -> "MATH 31A"
+	LDM -> "MATH 31B"
+	LDM -> "MATH 32A"
+	LDM -> "MATH 32B"
+	LDM -> "MATH 33A"
+	LDM -> "MATH 33B"
+
+	LDP [label="Lower Division Phyics", shape=box,color=green,style=filled]
+	"PHYSICS 1A"  [color=green,style=filled]
+        "PHYSICS 1B"  [color=green,style=filled]
+        "PHYSICS 1C"  [color=green,style=filled]
+        "PHYSICS 4AL" [color=green,style=filled]
+        "PHYSICS 4BL" [color=green,style=filled]
+	LDP -> "PHYSICS 1A"
+	LDP -> "PHYSICS 1B"
+	LDP -> "PHYSICS 1C"
+	LDP -> "PHYSICS 4AL"
+	LDP -> "PHYSICS 4BL"
+
+	EE [label="Electrical Engineering", shape=box]
+	EE -> UDEE
+	EE -> CEE
+	EE -> "EIGHT UNITS OF UPPER DIV EC ENGR COURSES"
+	"EIGHT UNITS OF UPPER DIV EC ENGR COURSES" [shape=box]
+	EE -> "FOUR UNITS OF UPPER DIV ELECTIVE"
+	"FOUR UNITS OF UPPER DIV ELECTIVE" [shape=box]
+	EE -> "EE CAPSTONE DESIGN COURSE"
+	"EE CAPSTONE DESIGN COURSE" [shape=box]
+	UDEE [label="Upper Division Electrical Engineering", shape=box]
+	"EC ENGR 101A"
+	"EC ENGR 101A" -> "MATH 32A"
+	"EC ENGR 101A" -> "MATH 32B"
+	"EC ENGR 101A" -> "PHYSICS 1C"
+	"EC ENGR 102" [color=blue,style=filled]
+	"EC ENGR 102" -> "MATH 33A"
+	"EC ENGR 102" -> "MATH 33B" [label="corequisite (unenforced)",color=yellow]
+	"EC ENGR 110"
+	"EC ENGR 110" -> "EC ENGR 111L" [color=red,label=corequisite]
+	"EC ENGR 110" -> "EC ENGR 10"
+	"EC ENGR 110" -> "EC ENGR M16"
+	"EC ENGR 110" -> "EC ENGR 102"
+	"EC ENGR 111L"
+	"EC ENGR 111L" -> "EC ENGR 110" [color=red,label=corequisite]
+	"EC ENGR 111L" -> "EC ENGR 10"
+	"EC ENGR 111L" -> "EC ENGR 11L"
+	"EC ENGR 113"
+	"EC ENGR 113" -> "EC ENGR 102"
+	"EC ENGR 131A"
+	"EC ENGR 131A" -> "MATH 32B"
+	"EC ENGR 131A" -> "MATH 33B"
+	UDEE -> "EC ENGR 101A"
+        UDEE -> "EC ENGR 102" 
+        UDEE -> "EC ENGR 110"
+        UDEE -> "EC ENGR 111L"
+        UDEE -> "EC ENGR 113"
+        UDEE -> "EC ENGR 131A"
+	CEE [label="Six Core Courses (pick 6)", shape=box]
+	"COM SCI 33"
+	"COM SCI 33" -> "COM SCI 32"
+	"EC ENGR 101B"
+	"EC ENGR 101B" -> "EC ENGR 101A"
+	"EC ENGR 115A"
+	"EC ENGR 115A" -> "EC ENGR 110"
+	"EC ENGR 121B"
+	"EC ENGR 121B" -> "EC ENGR 2"
+	"EC ENGR 132A"
+	"EC ENGR 132A" -> "EC ENGR 102"
+	"EC ENGR 132A" -> "EC ENGR 113"
+	"EC ENGR 132A" -> "EC ENGR 131A"
+	"EC ENGR 133A"
+	"EC ENGR 133A" -> "EC ENGR 131A"
+	"EC ENGR 133A" -> "COM SCI 31"
+	"EC ENGR 141"
+	"EC ENGR 141" -> "EC ENGR 102"
+	"EC ENGR 170A"
+	"EC ENGR 170A" -> "EC ENGR 2"
+	"EC ENGR 170A" -> "EC ENGR 101A"
+	CEE -> "COM SCI 33"
+	CEE -> "EC ENGR 101B"
+	CEE -> "EC ENGR 115A"
+	CEE -> "EC ENGR 121B"
+	CEE -> "EC ENGR 132A"
+	CEE -> "EC ENGR 133A"
+	CEE -> "EC ENGR 141"
+	CEE -> "EC ENGR 170A"
+
+	TBA [shape=box,label="Technical Breadth Area"]
+	TBA -> "COM SCI 31"
+	TBA -> "COM SCI 32"
+	TBA -> "COM SCI 33"
+}
